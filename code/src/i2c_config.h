@@ -1,11 +1,13 @@
-/*
- * File : i2c_config.h
- *
- *  Created on: Apr 13, 2019
- *  Author: Sanju Prakash Kannioth
- *  Reference: https://www.silabs.com/community/blog.entry.html/2016/03/09/chapter_10_2_contro-l8qA,
- *  		   http://cache.freescale.com/files/sensors/doc/app_note/AN4070.pdf
+/**
+ * @\file	i2c_config.h
+ * @\author	Sorabh Gandhi / Sanju Prakash Kannioth / Steve
+ * @\brief	This header file contains the declaration of all 
+ *			functionalities used in accelerometer and capacitive sensor
+ * @\date	12/25/2019
+ * @\Reference	https://www.silabs.com/community/blog.entry.html/2016/03/09/chapter_10_2_contro-l8qA,
+ *				http://cache.freescale.com/files/sensors/doc/app_note/AN4070.pdf
  */
+
 
 #ifndef I2C_CONFIG_H
 #define I2C_CONFIG_H

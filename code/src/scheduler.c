@@ -1,8 +1,10 @@
-/*
- * scheduler.c
+/**
+ * @\file	scheduler.c
+ * @\author	Sorabh Gandhi / Sanju Prakash Kannioth / Steve
+ * @\brief	This header file contains the definition of all 
+ *			functionalities used for temperature state machine
+ * @\date	12/25/2019
  *
- *  Created on: 06-Feb-2019
- *      Author: Sorabh
  */
 
 /*Own Headers*/
@@ -56,6 +58,7 @@ void state_machine(uint32 signals)
 	switch (CURRENT_STATE)
 	{
 		uint32_t data = 0;
+		//Initial power off state
 		case POWER_OFF_STATE:
 		{
 			if (events.COMP0_INTERRUPT & signals) {
@@ -76,6 +79,7 @@ void state_machine(uint32 signals)
 			break;
 		}
 
+		//Wait for I2C and sensor enable state
 		case WAIT_FOR_POWER_ON_STATE:
 		{
 			if (events.COMP1_INTERRUPT & signals) {
@@ -91,6 +95,7 @@ void state_machine(uint32 signals)
 			break;
 		}
 
+		//Perform an I2C slave address write and register write operation
 		case WAIT_FOR_I2C_COMMAND_WRITE_STATE:
 		{
 			if (events.TX_DONE & signals) {
@@ -101,6 +106,7 @@ void state_machine(uint32 signals)
 		  	break;
 		}
 
+		//Read the temperature data from the temperature register of the sensor
 		case WAIT_FOR_I2C_TEMPERATURE_READ_STATE:
 		{
 			if (events.TX_DONE & signals) {

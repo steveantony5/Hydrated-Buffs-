@@ -1,3 +1,5 @@
+//Reference: Inherited from Dan's IoT Module
+
 /*
  * ble_errors.c
  *

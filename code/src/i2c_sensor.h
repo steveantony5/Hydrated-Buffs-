@@ -2,7 +2,7 @@
  * @\file	i2c_sensor.h
  * @\author	Sorabh Gandhi
  * @\brief	This file contains declaration of functions to enable, read and disable the temperature sensor via i2c
- * @\date	02/06/2019
+ * @\date	12/01/2019
  *
  */
 
@@ -20,6 +20,7 @@
 #include "em_core.h"
 #include "bsp.h"
 
+/*own headers*/
 #include "scheduler.h"
 #include "main.h"
 

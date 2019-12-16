@@ -1,9 +1,12 @@
-/*
- * gpio.c
+/**
+ * @\file	gpio.c
+ * @\author	Sorabh Gandhi / Sanju Prakash Kannioth / Steve
+ * @\brief	This header file contains the definition of all 
+ *			functionalities used to onboard push button and led
+ * @\date	12/25/2019
  *
- *  Created on: Dec 12, 2018
- *      Author: Dan Walkes
  */
+ 
 #include "gpio.h"
 #include "em_gpio.h"
 #include <string.h>
@@ -65,13 +68,6 @@ void gpioint(uint8_t pin)
 	{
 		NVIC_DisableIRQ(GPIO_ODD_IRQn);
 		NVIC_DisableIRQ(GPIO_EVEN_IRQn);
-		//CORE_ATOMIC_IRQ_DISABLE();
-//		if ((GPIO_PinInGet(PB0_BUTTON_PORT, PB0_BUTTON_PIN)) == 0) {
-//			gecko_external_signal(EXT_SIGNAL_PB0_BUTTON_PRESSED);
-//		}
-//		else if ((GPIO_PinInGet(PB0_BUTTON_PORT, PB0_BUTTON_PIN)) == 1) {
-//			gecko_external_signal(EXT_SIGNAL_PB0_BUTTON_RELEASED);
-//		}
 
 		EXT_SIGNAL_PB0_BUTTON = 1;
 		gecko_external_signal(EXT_SIGNAL_PB0_BUTTON);

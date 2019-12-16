@@ -1,8 +1,10 @@
-/*
- * main.h
+  
+/**
+ * @\file	main.h
+ * @\author	Sorabh Gandhi / Sanju Prakash Kannioth / Steve
+ * @\brief	This header file contains the declaration for all the functions used in main application
+ * @\date	12/25/2019
  *
- *  Created on: 30-Jan-2019
- *      Author: Sorabh
  */
 
 #ifndef SRC_MAIN_H_

@@ -1,8 +1,10 @@
-/*
- * gpio.h
+/**
+ * @\file	gpio.h
+ * @\author	Sorabh Gandhi / Sanju Prakash Kannioth / Steve
+ * @\brief	This header file contains the declaration of all 
+ *			functionalities used to onboard push button and led
+ * @\date	12/25/2019
  *
- *  Created on: Dec 12, 2018
- *      Author: Dan Walkes
  */
 
 #ifndef SRC_GPIO_H_
@@ -10,13 +12,13 @@
 #include <stdbool.h>
 #include <stdint.h>
 
+//onboard push button
 #define PB0_BUTTON_PORT gpioPortF
 #define PB0_BUTTON_PIN 6
-#define PB1_BUTTON_PORT gpioPortF
-#define PB1_BUTTON_PIN 7
 
-//#define GPIO_SET_DISPLAY_EXT_COMIN_IMPLEMENTED 	1
-//#define GPIO_DISPLAY_SUPPORT_IMPLEMENTED		1
+//onboard push button on development board
+#define PB1_BUTTON_PORT gpioPortF
+#define PB1_BUTTON_PIN 7		1
 
 #define EXT_SIGNAL_PB0_BUTTON_PRESSED 0x01
 #define EXT_SIGNAL_PB0_BUTTON_RELEASED 0x02

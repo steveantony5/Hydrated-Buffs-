@@ -1,18 +1,22 @@
-/*
- * my_sleep.c
+/**
+ * @\file	my_sleep.c
+ * @\author	Sorabh Gandhi / Sanju Prakash Kannioth / Steve
+ * @\brief	This header file contains the definition of all 
+ *			functionalities to switch in different energy modes
+ * @\date	12/25/2019
  *
- *  Created on: 29-Jan-2019
- *      Author: Sorabh
  */
 
 #include "my_sleep.h"
 
+//Initialize sleep modes for all the energy modes
 void sleep_configure()
 {
 	const SLEEP_Init_t init = { 0 };
 	SLEEP_InitEx(&init);
 }
 
+//Set an enter the appropriate energy mode
 void sleep()
 {
 	switch (ENERGY_MODE)

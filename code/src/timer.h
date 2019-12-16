@@ -2,7 +2,7 @@
  * @\file	timer.h
  * @\author	Sorabh Gandhi
  * @\brief	This file contains declaration for timer initialization and delay function
- * @\date	02/06/2019
+ * @\date	12/06/2019
  *
  */
 

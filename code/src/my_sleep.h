@@ -1,8 +1,10 @@
-/*
- * my_sleep.h
+/**
+ * @\file	my_sleep.h
+ * @\author	Sorabh Gandhi / Sanju Prakash Kannioth / Steve
+ * @\brief	This header file contains the declaration of all 
+ *			functionalities to switch in different energy modes
+ * @\date	12/25/2019
  *
- *  Created on: 29-Jan-2019
- *      Author: Sorabh
  */
 
 #ifndef SRC_MY_SLEEP_H_

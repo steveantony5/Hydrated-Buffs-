@@ -1,8 +1,10 @@
-/*
- * scheduler.h
+/**
+ * @\file	scheduler.h
+ * @\author	Sorabh Gandhi / Sanju Prakash Kannioth / Steve
+ * @\brief	This header file contains the declaration of all 
+ *			functionalities used for temperature state machine
+ * @\date	12/25/2019
  *
- *  Created on: 06-Feb-2019
- *      Author: Sorabh
  */
 
 #ifndef SRC_SCHEDULER_H_

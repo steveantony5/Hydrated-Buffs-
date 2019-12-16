@@ -1,8 +1,11 @@
-/*
- * cmu.c
+/**
+ * @\file	cmu.c
+ * @\author	Sorabh Gandhi / Sanju Prakash Kannioth / Steve
+ * @\brief	This header file contains the definition of all 
+ *			functionalities used to initialize high frequency 
+ *			low frequency crystal oscillator
+ * @\date	12/25/2019
  *
- *  Created on: 28-Jan-2019
- *      Author: Sorabh
  */
 
 #include "cmu.h"

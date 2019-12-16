@@ -2,7 +2,7 @@
  * @\file	timer.c
  * @\author	Sorabh Gandhi
  * @\brief	This file contains definition for timer initialization function and delay function
- * @\date	02/06/2019
+ * @\date	11/26/2019
  *
  */
 
@@ -11,6 +11,7 @@
 
 //rollover_counter = 0;
 
+//Initialize LETIMER to operate in different energy modes
 void timer_Init()
 {
 
@@ -60,6 +61,7 @@ void timer_Init()
 	LETIMER0->CMD = LETIMER_CMD_START;
 }
 
+//Calculate Prescaler for timer rollback
 void calculate_prescaler(uint32_t osc_freq)
 {
 	uint32_t prescaler, comp0_value, comp1_value, power;
@@ -93,6 +95,8 @@ void calculate_prescaler(uint32_t osc_freq)
 	while (LETIMER0->SYNCBUSY != 0);
 }
 
+
+//IRQ for 3sec interuppt for temperature measurement
 void LETIMER0_IRQHandler (void)
 {
 	//Disable interrupt
@@ -125,6 +129,7 @@ void LETIMER0_IRQHandler (void)
 	gecko_external_signal(events.COMP1_INTERRUPT);
 }
 
+//Letimer based delay function
 void timerWaitUs(uint32_t us_wait)
 {
 	CORE_ATOMIC_IRQ_DISABLE();

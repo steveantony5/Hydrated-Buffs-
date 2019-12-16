@@ -2,7 +2,7 @@
  * @\file	i2c_sensor.c
  * @\author	Sorabh Gandhi
  * @\brief	This file contains definition of functions to enable, read and disable the temperature sensor via i2c
- * @\date	02/06/2019
+ * @\date	12/01/2019
  *
  */
 

@@ -1,11 +1,9 @@
 
 /***************************************************************************//**
  * @Author	Sorabh Gandhi
- * @Date	02/13/2019
+ * @Date	12/02/2019
  * @file main.c
- * @brief Bluetooth Thermometer
- * This Thermometer allows to measure temperature using the temperature sensor SI7021,
- * from a mobile app.
+ * @brief The is the application code for hyderated buff project
  *******************************************************************************
  * # License
  * <b>Copyright 2018 Silicon Laboratories Inc. www.silabs.com</b>
@@ -26,7 +24,6 @@
  *				https://www.bluetooth.com/specifications/gatt/viewer?attributeXmlFile=org.bluetooth.characteristic.temperature_measurement.xml
  *				https://www.silabs.com/documents/login/reference-manuals/bluetooth-api-reference.pdf - API Refernce Manual
  *
- *	@Configuration Method - PERIOD, LED_ON_TIME and ENERGY_MODE are defined in main.h
  ******************************************************************************/
 
 //Own Header
@@ -80,6 +77,7 @@ long map(long x, long in_min, long in_max, long out_min, long out_max)
     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
+/*Publish the amount of water level to bluetooth app*/
 void publish_water_level(int water_level) {
 	uint8_t databuffer[5];
 	uint8_t *p = databuffer;
@@ -129,7 +127,7 @@ int main(void)
   }
 }
 
-
+/*luetooth bluegecko state machine*/
 void gecko_ecen5823_update(struct gecko_cmd_packet *evt)
 {
 	gecko_update(evt);

@@ -1,8 +1,11 @@
-/*
- * log.c
+//Reference: Inherited from Dan's logging module
+
+/**
+ * @\file	log.c
+ * @\author	Sorabh Gandhi / Sanju Prakash Kannioth / Steve
+ * @\brief	This header file contains the definition for all the log functionalities
+ * @\date	12/25/2019
  *
- *  Created on: Dec 18, 2018
- *      Author: Dan Walkes
  */
 
 #include "retargetserial.h"
